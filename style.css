@@ -2,5 +2,22 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
 }
 
+div {
+    margin: auto;
+    width: 1000px;
+    margin-top: 50px;
+}
+
+img {
+    height: auto;
+    width: 150px;
+    border-radius: 150px;
+}
+
+.selected {
+    border: solid 3px red;
+}
