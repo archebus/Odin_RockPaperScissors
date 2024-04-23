@@ -67,7 +67,7 @@ function compareResult(userChoice, computerChoice) {
 function playRound(userChoice, computerChoice) {
     let result = null;
     resultOutput.innerHTML = "";
-    let comp = getComputerChoice();
+    computerChoice = getComputerChoice();
     result = `Computer threw <strong>${computerChoice}</strong>, you threw <strong>${userChoice}</strong>`;
     
     switch (compareResult(userChoice, computerChoice)) {
