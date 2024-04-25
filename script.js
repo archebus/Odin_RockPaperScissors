@@ -12,27 +12,32 @@ let computerChoice = getComputerChoice();
 let humanScore = 0;
 let computerScore = 0;
 
-$(rockImage).on('click', function() {
-    $(".images img").removeClass("selected");
-    $(this).addClass("selected");
-    userChoice = "rock";
+rockImage.addEventListener("click", function() {
+    console.log("Rock Clicked");
+    paperImage.classList.remove("selected");
+    scissorsImage.classList.remove("selected");
+    rockImage.classList.add("selected");
+    userChoice = "rock;"
 });
 
-$(paperImage).on('click', function() {
-    $(".images img").removeClass("selected");
-    $(this).addClass("selected");
-    userChoice = "paper";
+scissorsImage.addEventListener("click", function() {
+    paperImage.classList.remove("selected");
+    scissorsImage.classList.add("selected");
+    rockImage.classList.remove("selected");
+    userChoice = "scissors;"
 });
 
-$(scissorsImage).on('click', function() {
-    $(".images img").removeClass("selected");
-    $(this).addClass("selected");
-    userChoice = "scissors";
+paperImage.addEventListener("click", function() {
+    paperImage.classList.add("selected");
+    scissorsImage.classList.remove("selected");
+    rockImage.classList.remove("selected");
+    userChoice = "paper;"
 });
 
-$(throwHands).on('click', function() {
+throwHands.addEventListener("click", function() {
     playRound(userChoice, computerChoice);
 });
+
 
 function getComputerChoice() {
     let choice = Math.floor(Math.random() * 3);
@@ -87,7 +92,7 @@ function playRound(userChoice, computerChoice) {
     let finalString = `Computer Score: ${computerScore}<br>
     Human Score: ${humanScore}<br>
     <br>
-    ${result}`;
+    ${result}`
     
     resultOutput.innerHTML = finalString;
 }
