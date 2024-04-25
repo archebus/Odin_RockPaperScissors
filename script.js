@@ -17,21 +17,21 @@ rockImage.addEventListener("click", function() {
     paperImage.classList.remove("selected");
     scissorsImage.classList.remove("selected");
     rockImage.classList.add("selected");
-    userChoice = "rock;"
+    userChoice = "rock";
 });
 
 scissorsImage.addEventListener("click", function() {
     paperImage.classList.remove("selected");
     scissorsImage.classList.add("selected");
     rockImage.classList.remove("selected");
-    userChoice = "scissors;"
+    userChoice = "scissors";
 });
 
 paperImage.addEventListener("click", function() {
     paperImage.classList.add("selected");
     scissorsImage.classList.remove("selected");
     rockImage.classList.remove("selected");
-    userChoice = "paper;"
+    userChoice = "paper";
 });
 
 throwHands.addEventListener("click", function() {
@@ -73,7 +73,7 @@ function playRound(userChoice, computerChoice) {
     let result = null;
     resultOutput.innerHTML = "";
     computerChoice = getComputerChoice();
-    result = `Computer threw <strong>${computerChoice}</strong>, you threw <strong>${userChoice}</strong>`;
+    result = `Computer threw <strong>${computerChoice}</strong>, you threw <strong>${userChoice}</strong>`
     
     switch (compareResult(userChoice, computerChoice)) {
         case 0: 
